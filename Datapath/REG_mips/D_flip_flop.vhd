@@ -13,6 +13,7 @@ port(
 	
 	i_clk:		in std_logic;
 	i_aresetn:	in std_logic;
+	i_enable	:	in std_logic;
 	i_data:		in std_logic_vector(BUS_WIDTH-1 downto 0);
 	o_data:		out std_logic_vector(BUS_WIDTH-1 downto 0)
 
@@ -29,7 +30,9 @@ architecture arch of D_flip_flop is
 				if(i_aresetn='0') then
 					o_data<=(others=>'0');
 				elsif(rising_edge(i_clk)) then
-					o_data<=i_data;
+					if(i_enable='1') then
+						o_data<=i_data;
+					end if;
 				end if;
 			end process;
 end arch;
