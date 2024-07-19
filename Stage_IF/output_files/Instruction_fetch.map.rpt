@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Instruction_fetch
-Thu Jul 18 20:40:55 2024
+Fri Jul 19 18:29:59 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,16 +13,19 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |Instruction_fetch
- 10. Parameter Settings for User Entity Instance: MUX21:U1
- 11. Parameter Settings for User Entity Instance: D_flip_flop:u2
- 12. Parameter Settings for User Entity Instance: Instruction_mem:u3
- 13. Parameter Settings for User Entity Instance: MUX21:u4
- 14. Port Connectivity Checks: "MUX21:u4"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Instruction_fetch
+ 12. Parameter Settings for User Entity Instance: MUX21:U1
+ 13. Parameter Settings for User Entity Instance: D_flip_flop:u2
+ 14. Parameter Settings for User Entity Instance: Instruction_mem:u3
+ 15. Parameter Settings for User Entity Instance: MUX21:u4
+ 16. Parameter Settings for User Entity Instance: IF_ID_register:u5
+ 17. Port Connectivity Checks: "MUX21:u4"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -49,14 +52,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jul 18 20:40:55 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jul 19 18:29:59 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Instruction_fetch                           ;
 ; Top-level Entity Name           ; Instruction_fetch                           ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 32                                          ;
-; Total pins                      ; 100                                         ;
+; Total registers                 ; 64                                          ;
+; Total pins                      ; 101                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -182,6 +185,7 @@ https://fpgasoftware.intel.com/eula.
 ; Instruction_mem.vhd              ; yes             ; User VHDL File        ; E:/Mips pipelined processor/Stage_IF/Instruction_mem.vhd   ;         ;
 ; mux21.vhd                        ; yes             ; Auto-Found VHDL File  ; E:/Mips pipelined processor/Stage_IF/mux21.vhd             ;         ;
 ; d_flip_flop.vhd                  ; yes             ; Auto-Found VHDL File  ; E:/Mips pipelined processor/Stage_IF/d_flip_flop.vhd       ;         ;
+; if_id_register.vhd               ; yes             ; Auto-Found VHDL File  ; E:/Mips pipelined processor/Stage_IF/if_id_register.vhd    ;         ;
 +----------------------------------+-----------------+-----------------------+------------------------------------------------------------+---------+
 
 
@@ -190,37 +194,76 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 30          ;
+; Estimate of Logic utilization (ALMs needed) ; 33          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 59          ;
+; Combinational ALUT usage for logic          ; 31          ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 0           ;
 ;     -- 5 input functions                    ; 0           ;
 ;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 59          ;
+;     -- <=3 input functions                  ; 31          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 32          ;
+; Dedicated logic registers                   ; 64          ;
 ;                                             ;             ;
-; I/O pins                                    ; 100         ;
+; I/O pins                                    ; 101         ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 32          ;
-; Total fan-out                               ; 407         ;
-; Average fan-out                             ; 1.40        ;
+; Maximum fan-out                             ; 64          ;
+; Total fan-out                               ; 510         ;
+; Average fan-out                             ; 1.72        ;
 +---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name       ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------------+--------------+
-; |Instruction_fetch         ; 59 (59)             ; 32 (0)                    ; 0                 ; 0          ; 100  ; 0            ; |Instruction_fetch                ; Instruction_fetch ; work         ;
-;    |D_flip_flop:u2|        ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Instruction_fetch|D_flip_flop:u2 ; D_flip_flop       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
+; |Instruction_fetch         ; 31 (30)             ; 64 (0)                    ; 0                 ; 0          ; 101  ; 0            ; |Instruction_fetch                   ; Instruction_fetch ; work         ;
+;    |D_flip_flop:u2|        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Instruction_fetch|D_flip_flop:u2    ; D_flip_flop       ; work         ;
+;    |IF_ID_register:u5|     ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Instruction_fetch|IF_ID_register:u5 ; IF_ID_register    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++------------------------------------------+----------------------------------------+
+; Register name                            ; Reason for Removal                     ;
++------------------------------------------+----------------------------------------+
+; IF_ID_register:u5|Instruction_out[0..31] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 32   ;                                        ;
++------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                ;
++---------------------------------------+---------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------------------------------+---------------------------+----------------------------------------+
+; IF_ID_register:u5|Instruction_out[1]  ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[31]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[3]  ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[30]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[5]  ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[29]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[7]  ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[28]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[9]  ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[27]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[11] ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[26]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[13] ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[25]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[15] ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[24]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[17] ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[23]  ;
+;                                       ; due to stuck port data_in ;                                        ;
+; IF_ID_register:u5|Instruction_out[19] ; Stuck at GND              ; IF_ID_register:u5|Instruction_out[22]  ;
+;                                       ; due to stuck port data_in ;                                        ;
++---------------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -228,12 +271,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 32    ;
+; Total registers                              ; 64    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 30    ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Clear ; 64    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Clock Enable       ; 64    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -289,6 +332,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IF_ID_register:u5 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; bus_width      ; 32    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------+
 ; Port Connectivity Checks: "MUX21:u4"      ;
 +---------+-------+----------+--------------+
@@ -303,20 +356,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 32                          ;
-;     CLR SLD           ; 30                          ;
-;     ENA CLR           ; 2                           ;
-; arriav_lcell_comb     ; 61                          ;
-;     arith             ; 59                          ;
-;         1 data inputs ; 58                          ;
-;         2 data inputs ; 1                           ;
+; arriav_ff             ; 64                          ;
+;     ENA CLR           ; 34                          ;
+;     ENA CLR SLD       ; 30                          ;
+; arriav_lcell_comb     ; 32                          ;
+;     arith             ; 30                          ;
+;         1 data inputs ; 30                          ;
 ;     normal            ; 2                           ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-; boundary_port         ; 100                         ;
+;         2 data inputs ; 1                           ;
+; boundary_port         ; 101                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.90                        ;
-; Average LUT depth     ; 2.36                        ;
+; Average LUT depth     ; 1.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -335,12 +387,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Jul 18 20:40:43 2024
+    Info: Processing started: Fri Jul 19 18:29:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Instruction_fetch -c Instruction_fetch
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file instruction_fetch.vhd
-    Info (12022): Found design unit 1: Instruction_fetch-arch File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 29
+    Info (12022): Found design unit 1: Instruction_fetch-arch File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 30
     Info (12023): Found entity 1: Instruction_fetch File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file instruction_mem.vhd
     Info (12022): Found design unit 1: Instruction_mem-arch File: E:/Mips pipelined processor/Stage_IF/Instruction_mem.vhd Line: 23
@@ -352,60 +404,64 @@ Info (12127): Elaborating entity "Instruction_fetch" for the top level hierarchy
 Warning (12125): Using design file mux21.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: MUX21-arch File: E:/Mips pipelined processor/Stage_IF/mux21.vhd Line: 22
     Info (12023): Found entity 1: MUX21 File: E:/Mips pipelined processor/Stage_IF/mux21.vhd Line: 6
-Info (12128): Elaborating entity "MUX21" for hierarchy "MUX21:U1" File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 117
+Info (12128): Elaborating entity "MUX21" for hierarchy "MUX21:U1" File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 125
 Warning (12125): Using design file d_flip_flop.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: D_flip_flop-arch File: E:/Mips pipelined processor/Stage_IF/d_flip_flop.vhd Line: 25
+    Info (12022): Found design unit 1: D_flip_flop-arch File: E:/Mips pipelined processor/Stage_IF/d_flip_flop.vhd Line: 26
     Info (12023): Found entity 1: D_flip_flop File: E:/Mips pipelined processor/Stage_IF/d_flip_flop.vhd Line: 6
-Info (12128): Elaborating entity "D_flip_flop" for hierarchy "D_flip_flop:u2" File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 130
-Info (12128): Elaborating entity "Instruction_mem" for hierarchy "Instruction_mem:u3" File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 142
+Info (12128): Elaborating entity "D_flip_flop" for hierarchy "D_flip_flop:u2" File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 138
+Info (12128): Elaborating entity "Instruction_mem" for hierarchy "Instruction_mem:u3" File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 151
+Warning (12125): Using design file if_id_register.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: IF_ID_register-arch File: E:/Mips pipelined processor/Stage_IF/if_id_register.vhd Line: 23
+    Info (12023): Found entity 1: IF_ID_register File: E:/Mips pipelined processor/Stage_IF/if_id_register.vhd Line: 6
+Info (12128): Elaborating entity "IF_ID_register" for hierarchy "IF_ID_register:u5" File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 177
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "Instruction_mem:u3|ROM_data" is uninferred due to inappropriate RAM size File: E:/Mips pipelined processor/Stage_IF/Instruction_mem.vhd Line: 56
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_Instruction[0]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[1]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[2]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[3]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[4]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[5]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[6]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[7]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[8]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[9]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[10]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[11]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[12]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[13]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[14]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[15]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[16]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[17]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[18]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[19]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[20]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[21]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[22]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[23]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[24]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[25]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[26]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[27]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[28]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[29]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[30]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
-    Warning (13410): Pin "o_Instruction[31]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 22
+    Warning (13410): Pin "o_Instruction[0]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[1]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[2]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[3]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[4]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[5]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[6]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[7]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[8]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[9]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[10]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[11]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[12]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[13]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[14]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[15]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[16]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[17]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[18]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[19]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[20]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[21]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[22]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[23]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[24]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[25]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[26]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[27]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[28]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[29]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[30]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
+    Warning (13410): Pin "o_Instruction[31]" is stuck at GND File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_IF_FLUSH" File: E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd Line: 19
-Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 36 input pins
+Info (21057): Implemented 196 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 37 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 61 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4855 megabytes
-    Info: Processing ended: Thu Jul 18 20:40:55 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:08
+    Info (21061): Implemented 95 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Fri Jul 19 18:29:59 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
 
 

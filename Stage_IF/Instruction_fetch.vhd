@@ -169,7 +169,7 @@ architecture arch of Instruction_fetch is
 	port map
 	(
 		i_data1	=>(others=>'0'),
-		i_data2	=>Instruction	,
+		i_data2	=>Instruction_FROM_IM	,
 		i_sel		=>i_IF_FLUSH	,
 		o_data	=>Instruction_from_MUX		
 	);
