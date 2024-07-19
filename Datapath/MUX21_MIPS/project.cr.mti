@@ -1,0 +1,17 @@
+{E:/Mips pipelined processor/Datapath/MUX21_MIPS/tb_MUX21.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Mips pipelined processor/Datapath/MUX21_MIPS/tb_MUX21.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_MUX21
+-- Compiling architecture arch of tb_MUX21
+
+} {} {}} {E:/Mips pipelined processor/Datapath/MUX21_MIPS/MUX21.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Mips pipelined processor/Datapath/MUX21_MIPS/MUX21.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MUX21
+-- Compiling architecture arch of MUX21
+
+} {} {}}

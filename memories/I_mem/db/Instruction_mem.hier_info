@@ -1,0 +1,10 @@
+|Instruction_mem
+Read_Address[0] => ROM_data.RADDR
+Read_Address[1] => ROM_data.RADDR1
+Read_Address[2] => ROM_data.RADDR2
+Instruction[0] <= ROM_data.DATAOUT
+Instruction[1] <= ROM_data.DATAOUT1
+Instruction[2] <= ROM_data.DATAOUT2
+Instruction[3] <= ROM_data.DATAOUT3
+
+

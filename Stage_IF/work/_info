@@ -1,0 +1,263 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Mips pipelined processor/Datapath/MUX21_MIPS
+Ed_flip_flop
+Z0 w1721331634
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 12
+Z4 dE:/Mips pipelined processor/Stage_IF
+Z5 8E:/Mips pipelined processor/Stage_IF/D_flip_flop.vhd
+Z6 FE:/Mips pipelined processor/Stage_IF/D_flip_flop.vhd
+l0
+L6 1
+VL_`6Ro6]abmIJRYT<OhSz0
+!s100 f`4?RER8T0Y9YI:mUdH;A3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1721333524
+!i10b 1
+Z9 !s108 1721333524.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Mips pipelined processor/Stage_IF/D_flip_flop.vhd|
+Z11 !s107 E:/Mips pipelined processor/Stage_IF/D_flip_flop.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R1
+R2
+R3
+DEx4 work 11 d_flip_flop 0 22 L_`6Ro6]abmIJRYT<OhSz0
+!i122 12
+l26
+L25 11
+Vo[`ifigIeaCX0;o?843BO1
+!s100 1[WCf=L4mYV`T:zRlFD0b1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eif_id_register
+Z14 w1721317373
+R2
+R3
+!i122 13
+R4
+Z15 8E:/Mips pipelined processor/Stage_IF/IF_ID_register.vhd
+Z16 FE:/Mips pipelined processor/Stage_IF/IF_ID_register.vhd
+l0
+L6 1
+V?ISW27ighWTCPj6j[iEES1
+!s100 f^=RZk_59QEZ1oOX@YUm_3
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Mips pipelined processor/Stage_IF/IF_ID_register.vhd|
+Z18 !s107 E:/Mips pipelined processor/Stage_IF/IF_ID_register.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 14 if_id_register 0 22 ?ISW27ighWTCPj6j[iEES1
+!i122 13
+l23
+Z19 L22 18
+V``0R`_]S7Zz]UEf2e]R<P2
+!s100 bILF4GR>M09eBGgL5Vk^V2
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Einstruction_fetch
+Z20 w1721331615
+R1
+R2
+R3
+!i122 14
+R4
+Z21 8E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd
+Z22 FE:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd
+l0
+L7 1
+V4NmVO^XF>4GmQ?a2neo3G3
+!s100 IjS]_Q2:m=zRIn@9_N[z:0
+R7
+32
+Z23 !s110 1721333525
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd|
+Z25 !s107 E:/Mips pipelined processor/Stage_IF/Instruction_fetch.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 17 instruction_fetch 0 22 4NmVO^XF>4GmQ?a2neo3G3
+!i122 14
+l111
+L29 143
+Vm3Z^h3GB>=Z5S5iZ?YK`<3
+!s100 Lk1lMeU:U<JAe9F55O^HZ0
+R7
+32
+R23
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R12
+R13
+Einstruction_mem
+Z26 w1721307059
+R1
+R2
+R3
+!i122 15
+R4
+Z27 8E:/Mips pipelined processor/Stage_IF/Instruction_mem.vhd
+Z28 FE:/Mips pipelined processor/Stage_IF/Instruction_mem.vhd
+l0
+L7 1
+V7ja6M=?h[2H5jd:cIO?YY0
+!s100 fO9[W5za`YNkmX^W9:l0B3
+R7
+32
+R23
+!i10b 1
+Z29 !s108 1721333525.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Mips pipelined processor/Stage_IF/Instruction_mem.vhd|
+Z31 !s107 E:/Mips pipelined processor/Stage_IF/Instruction_mem.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 15 instruction_mem 0 22 7ja6M=?h[2H5jd:cIO?YY0
+!i122 15
+l58
+L23 41
+VB=c5h8L>in7kT`R=D3kaY2
+!s100 HOOUg_e5:Ohi7JRLGeC=A2
+R7
+32
+R23
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R12
+R13
+Emux21
+Z32 w1721314187
+R2
+R3
+!i122 16
+R4
+Z33 8E:/Mips pipelined processor/Stage_IF/MUX21.vhd
+Z34 FE:/Mips pipelined processor/Stage_IF/MUX21.vhd
+l0
+L6 1
+Vk2_U2P4=^BTNAM1D63lQZ3
+!s100 gQLSW_?3EmOIHl4>90:_:3
+R7
+32
+R23
+!i10b 1
+R29
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Mips pipelined processor/Stage_IF/MUX21.vhd|
+Z36 !s107 E:/Mips pipelined processor/Stage_IF/MUX21.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 5 mux21 0 22 k2_U2P4=^BTNAM1D63lQZ3
+!i122 16
+l23
+R19
+VBBNJ9HMoLnz`?C?2CY;L_0
+!s100 hJ?XgiO98:a<92z6NTlAz2
+R7
+32
+R23
+!i10b 1
+R29
+R35
+R36
+!i113 1
+R12
+R13
+Etb_instruction_fetch
+Z37 w1721333365
+R2
+R3
+!i122 17
+R4
+Z38 8E:/Mips pipelined processor/Stage_IF/tb_Instruction_fetch.vhd
+Z39 FE:/Mips pipelined processor/Stage_IF/tb_Instruction_fetch.vhd
+l0
+L5 1
+V0XYTV:B`ocC[P?`NiG?mC2
+!s100 ]2l7D5ODY9GKYaHjBCfWh1
+R7
+32
+Z40 !s110 1721333526
+!i10b 1
+Z41 !s108 1721333526.000000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Mips pipelined processor/Stage_IF/tb_Instruction_fetch.vhd|
+Z43 !s107 E:/Mips pipelined processor/Stage_IF/tb_Instruction_fetch.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+Z44 DEx4 work 20 tb_instruction_fetch 0 22 0XYTV:B`ocC[P?`NiG?mC2
+!i122 17
+l47
+Z45 L10 97
+Z46 VIJ:g]lNR^<?z]XjoF=`AE3
+Z47 !s100 jLl3Fz`I`Zi3=amdN0dRW3
+R7
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R12
+R13

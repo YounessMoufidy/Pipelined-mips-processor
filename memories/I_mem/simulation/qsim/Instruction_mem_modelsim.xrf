@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, E:/Mips pipelined processor/memories/I_mem/Instruction_mem.vhd
+source_file = 1, E:/Mips pipelined processor/memories/I_mem/Waveform.vwf
+source_file = 1, E:/Mips pipelined processor/memories/I_mem/Waveform1.vwf
+source_file = 1, e:/fpga/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, e:/fpga/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, e:/fpga/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, e:/fpga/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, E:/Mips pipelined processor/memories/I_mem/db/Instruction_mem.cbx.xml
+design_name = Instruction_mem
+instance = comp, \Instruction[0]~output\, Instruction[0]~output, Instruction_mem, 1
+instance = comp, \Instruction[1]~output\, Instruction[1]~output, Instruction_mem, 1
+instance = comp, \Instruction[2]~output\, Instruction[2]~output, Instruction_mem, 1
+instance = comp, \Instruction[3]~output\, Instruction[3]~output, Instruction_mem, 1
+instance = comp, \Read_Address[0]~input\, Read_Address[0]~input, Instruction_mem, 1
+instance = comp, \Read_Address[1]~input\, Read_Address[1]~input, Instruction_mem, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, Instruction_mem, 1

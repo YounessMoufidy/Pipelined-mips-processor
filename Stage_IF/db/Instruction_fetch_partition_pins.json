@@ -1,0 +1,277 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_NEW_PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[11]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[13]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[15]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[16]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[17]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[18]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[19]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[20]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[21]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[22]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[23]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[24]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[25]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[26]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[27]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[28]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[29]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[30]",
+					"strict" : false
+				},
+				{
+					"name" : "o_NEW_PC[31]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_aresetn",
+					"strict" : false
+				},
+				{
+					"name" : "i_PCsrc",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[11]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[13]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[16]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[17]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[18]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[19]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[20]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[21]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[22]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[23]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[24]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[25]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[26]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[27]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[28]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[29]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[30]",
+					"strict" : false
+				},
+				{
+					"name" : "i_PC[31]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

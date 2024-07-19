@@ -1,0 +1,97 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Mips pipelined processor/Datapath/REGFILE_MIPS
+Eshift_left_circuit
+Z0 w1721342798
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 16
+Z4 dE:/Mips pipelined processor/Datapath/Shift_left_MIPS
+Z5 8E:/Mips pipelined processor/Datapath/Shift_left_MIPS/Shift_left_circuit.vhd
+Z6 FE:/Mips pipelined processor/Datapath/Shift_left_MIPS/Shift_left_circuit.vhd
+l0
+L7 1
+VF3Pbm6e<6KITAMYnza[<41
+!s100 5jJBUl^UT5^hYII;^=fEW0
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1721396426
+!i10b 1
+Z9 !s108 1721396426.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Mips pipelined processor/Datapath/Shift_left_MIPS/Shift_left_circuit.vhd|
+Z11 !s107 E:/Mips pipelined processor/Datapath/Shift_left_MIPS/Shift_left_circuit.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R1
+R2
+R3
+DEx4 work 18 shift_left_circuit 0 22 F3Pbm6e<6KITAMYnza[<41
+!i122 16
+l27
+L23 10
+Vf@HZ[B=^KUSoC^bHd35jK1
+!s100 JBJF?MV]RD:h`>GfH13>32
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etb_shift_left_circuit
+Z14 w1721396358
+R1
+R2
+R3
+!i122 17
+R4
+Z15 8E:/Mips pipelined processor/Datapath/Shift_left_MIPS/tb_Shift_left_circuit.vhd
+Z16 FE:/Mips pipelined processor/Datapath/Shift_left_MIPS/tb_Shift_left_circuit.vhd
+l0
+L7 1
+Va?iA::AJI8k9ebR]iY:kM1
+!s100 k^eMh;ZkP]l8:[VMBejBc1
+R7
+32
+Z17 !s110 1721396427
+!i10b 1
+Z18 !s108 1721396427.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Mips pipelined processor/Datapath/Shift_left_MIPS/tb_Shift_left_circuit.vhd|
+Z20 !s107 E:/Mips pipelined processor/Datapath/Shift_left_MIPS/tb_Shift_left_circuit.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+Z21 DEx4 work 21 tb_shift_left_circuit 0 22 a?iA::AJI8k9ebR]iY:kM1
+!i122 17
+l43
+Z22 L12 75
+Z23 VHZ6C[A@FXMX6QG<N[H6?21
+Z24 !s100 ng[`W1nf=2H>8@=52AKN90
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
